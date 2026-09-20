@@ -1,0 +1,18 @@
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        int n = nums.length;
+        int i = 0, j = 0;
+        int[] ans = new int[2 * n];
+
+        while(i < n) {
+            ans[j] = nums[i];
+            i++;
+            j++;
+            if (i == n && j != 2 * n){
+                i = 0;
+            }
+        }
+
+        return ans;
+    }
+}
